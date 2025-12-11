@@ -57,22 +57,22 @@ These predictions were then compared with a 3D ANSYS model under a 600 in·lbf t
 **Representative figures from the baseline analysis:**
 
 Baseline hand-calculation MATLAB output:  
-![Baseline Hand Calculations](/assets/images/2025-torquewrench/image_045.png)
+![Baseline Hand Calculations](/assets/images/image_045.png)
 
 Baseline deflection from ANSYS:  
-![Baseline Deflection](/assets/images/2025-torquewrench/image_046.png)
+![Baseline Deflection](/assets/images/image_046.png)
 
 Baseline strain at gauge location:  
-![Baseline Strain at Gauge](/assets/images/2025-torquewrench/image_047.png)
+![Baseline Strain at Gauge](/assets/images/image_047.png)
 
 Baseline maximum normal stress with clamp-induced concentration:  
-![Baseline Max Stress](/assets/images/2025-torquewrench/image_048.png)
+![Baseline Max Stress](/assets/images/image_048.png)
 
 Deformed mesh visualization for beam-theory validity check:  
-![Baseline Deformed Mesh](/assets/images/2025-torquewrench/image_049.png)
+![Baseline Deformed Mesh](/assets/images/image_049.png)
 
 Zoom on stress near the clamped drive region:  
-![Baseline Clamp Stress Zoom](/assets/images/2025-torquewrench/image_050.png)
+![Baseline Clamp Stress Zoom](/assets/images/image_050.png)
 
 ---
 
@@ -90,15 +90,15 @@ To improve sensitivity and still satisfy strength and durability constraints, I 
 The improved design was modeled in Fusion 360 and imported into ANSYS for FEA.
 
 Improved CAD geometry and dimensions:  
-![Improved CAD Overview](../assets/images/2025-torquewrench/image_051.png)  
-![Improved CAD Detail](../assets/images/2025-torquewrench/image_031.png)
+![Improved CAD Overview](../assets/images/image_051.png)  
+![Improved CAD Detail](../assets/images/image_031.png)
 
 Strain-gauge placement and cross-section:  
-![Gauge Coordinates](../assets/images/2025-torquewrench/image_033.png)  
-![Gauge Region Detail](../assets/images/2025-torquewrench/image_034.png)
+![Gauge Coordinates](../assets/images/image_033.png)  
+![Gauge Region Detail](../assets/images/image_034.png)
 
 Loading and boundary conditions:  
-![Loading Diagram](../assets/images/2025-torquewrench/image_035.png)
+![Loading Diagram](../assets/images/image_035.png)
 
 FEA of the improved design showed:
 
@@ -108,16 +108,16 @@ FEA of the improved design showed:
 - Full-bridge output with GF ≈ 2.1: **1.91 mV/V** (almost 2× the required sensitivity)
 
 Strain distribution at the probe location:  
-![Improved Strain Probe Overview](../assets/images/2025-torquewrench/image_036.png)  
-![Improved Strain Probe Zoom](../assets/images/2025-torquewrench/image_037.png)
+![Improved Strain Probe Overview](../assets/images/image_036.png)  
+![Improved Strain Probe Zoom](../assets/images/image_037.png)
 
 Maximum principal stress:  
-![Improved Max Principal Stress](../assets/images/2025-torquewrench/image_038.png)  
-![Improved Stress Distribution](../assets/images/2025-torquewrench/image_039.png)
+![Improved Max Principal Stress](../assets/images/image_038.png)  
+![Improved Stress Distribution](../assets/images/image_039.png)
 
 Load-point deflection and gauge strain values:  
-![Improved Deflection](../assets/images/2025-torquewrench/image_040.png)  
-![Improved Strain Values](../assets/images/2025-torquewrench/image_041.png)
+![Improved Deflection](../assets/images/image_040.png)  
+![Improved Strain Values](../assets/images/image_041.png)
 
 ---
 
@@ -126,11 +126,11 @@ Load-point deflection and gauge strain values:
 To instrument the wrench, I selected a compact, full-bridge strain-gauge configuration that fits within the <0.45 in width constraint and aligns with the principal bending strain.
 
 Example candidate and gauge-factor detail from vendor listing:  
-![Gauge Listing](../assets/images/2025-torquewrench/image_042.png)  
-![Gauge Factor Detail](../assets/images/2025-torquewrench/image_043.png)
+![Gauge Listing](../assets/images/image_042.png)  
+![Gauge Factor Detail](../assets/images/image_043.png)
 
 Datasheet for a manufacturer-recommended alternative:  
-![Gauge Datasheet](../assets/images/2025-torquewrench/image_044.png)
+![Gauge Datasheet](../assets/images/image_044.png)
 
 Using the FEA strain at the gauge location for the improved design:
 
@@ -152,12 +152,12 @@ The full-bridge configuration easily meets the 1.0 mV/V requirement and provides
 To go beyond a traditional  wrench design, I used Fusion 360’s **Generative Design** tool to create topology-optimized versions of the wrench that follow load paths and remove non-critical material.
 
 Generative setup and parameters:  
-![Generative Setup](../assets/images/2025-torquewrench/image_015.png)
+![Generative Setup](../assets/images/image_015.png)
 
 Example generative design trials:  
-![Generative Trial 1](../assets/images/2025-torquewrench/image_016.png)  
-![Generative Trial 2](../assets/images/2025-torquewrench/image_017.png)  
-![Generative Trial 3 (Final)](../assets/images/2025-torquewrench/image_018.png)
+![Generative Trial 1](../assets/images/image_016.png)  
+![Generative Trial 2](../assets/images/image_017.png)  
+![Generative Trial 3 (Final)](../assets/images/image_018.png)
 
 These concepts preserve the drive and gauge regions while aggressively removing material along the handle.
 
@@ -168,7 +168,7 @@ These concepts preserve the drive and gauge regions while aggressively removing 
 The final generative design candidate was brought back into ANSYS for evaluation.
 
 Deformation under 600 in·lbf:  
-![Generative Deformation](../assets/images/2025-torquewrench/image_019.png)
+![Generative Deformation](../assets/images/image_019.png)
 
 - Generative design deformation: **0.61 in**  
 - Improved  design deformation: **0.371 in**
@@ -176,7 +176,7 @@ Deformation under 600 in·lbf:
 This shows that the generative geometry is significantly more compliant, which is expected given its lightweight nature.
 
 Normal stress distribution:  
-![Generative Normal Stress](../assets/images/2025-torquewrench/image_020.png)
+![Generative Normal Stress](../assets/images/image_020.png)
 
 Although peak normal stresses are higher (around 75 ksi), they are conservative because:
 
@@ -185,8 +185,8 @@ Although peak normal stresses are higher (around 75 ksi), they are conservative 
 - Small radii and internal features in generative designs tend to produce local stress spikes in FEA
 
 Principal stress visualization:  
-![Generative Principal Stress 1](../assets/images/2025-torquewrench/image_021.png)  
-![Generative Principal Stress 2](../assets/images/2025-torquewrench/image_022.png)
+![Generative Principal Stress 1](../assets/images/image_021.png)  
+![Generative Principal Stress 2](../assets/images/image_022.png)
 
 ---
 
@@ -195,7 +195,7 @@ Principal stress visualization:
 A key outcome of the generative workflow is the dramatic reduction in volume (and thus mass) relative to the original solid wrench.
 
 Volume comparison:  
-![Generative Volume](../assets/images/2025-torquewrench/image_023.png)
+![Generative Volume](../assets/images/image_023.png)
 
 - Original  beam design volume: **4.071 in³**  
 - Generative design volume: **1.155 in³**  
