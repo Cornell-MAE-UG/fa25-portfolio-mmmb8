@@ -39,7 +39,7 @@ I modeled and simulated **three designs**:
 
 ### **1. Baseline Design**
 
-The baseline design is a prismatic, rectangular beam-style wrench. Hand calculations using simple beam theory were used to estimate:
+The baseline design is a , rectangular beam-style wrench. Hand calculations using simple beam theory were used to estimate:
 
 - Maximum bending stress  
 - Tip deflection  
@@ -148,7 +148,7 @@ The full-bridge configuration easily meets the 1.0 mV/V requirement and provides
 
 ## 🚀 Generative Design Concept (Fusion 360)
 
-To go beyond a traditional prismatic wrench design, I used Fusion 360’s **Generative Design** tool to create topology-optimized versions of the wrench that follow load paths and remove non-critical material.
+To go beyond a traditional  wrench design, I used Fusion 360’s **Generative Design** tool to create topology-optimized versions of the wrench that follow load paths and remove non-critical material.
 
 Generative setup and parameters:  
 ![Generative Setup](../assets/images/2025-torquewrench/image_015.png)
@@ -170,7 +170,7 @@ Deformation under 600 in·lbf:
 ![Generative Deformation](../assets/images/2025-torquewrench/image_019.png)
 
 - Generative design deformation: **0.61 in**  
-- Improved prismatic design deformation: **0.371 in**
+- Improved  design deformation: **0.371 in**
 
 This shows that the generative geometry is significantly more compliant, which is expected given its lightweight nature.
 
@@ -196,7 +196,7 @@ A key outcome of the generative workflow is the dramatic reduction in volume (an
 Volume comparison:  
 ![Generative Volume](../assets/images/2025-torquewrench/image_023.png)
 
-- Original prismatic beam design volume: **4.071 in³**  
+- Original  beam design volume: **4.071 in³**  
 - Generative design volume: **1.155 in³**  
 - Volume (and mass) reduction: **> 70%**
 
