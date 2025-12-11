@@ -1,6 +1,6 @@
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Matthew Bulger - CV
 permalink: /cv/
 ---
 ## Curriculum Vitae
