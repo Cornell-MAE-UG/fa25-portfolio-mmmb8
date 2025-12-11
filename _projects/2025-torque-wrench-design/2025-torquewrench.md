@@ -22,7 +22,7 @@ It demonstrates:
 
 ---
 
-## 🧩 Project Summary
+##  Project Summary
 
 The wrench was designed to:
 
@@ -146,7 +146,7 @@ The full-bridge configuration easily meets the 1.0 mV/V requirement and provides
 
 ---
 
-## 🚀 Generative Design Concept (Fusion 360)
+##  Generative Design Concept (Fusion 360)
 
 To go beyond a traditional  wrench design, I used Fusion 360’s **Generative Design** tool to create topology-optimized versions of the wrench that follow load paths and remove non-critical material.
 
@@ -162,7 +162,7 @@ These concepts preserve the drive and gauge regions while aggressively removing 
 
 ---
 
-## 🧪 Generative Design FEA Results
+##  Generative Design FEA Results
 
 The final generative design candidate was brought back into ANSYS for evaluation.
 
@@ -189,7 +189,7 @@ Principal stress visualization:
 
 ---
 
-## ⚖️ Volume & Mass Comparison
+##  Volume & Mass Comparison
 
 A key outcome of the generative workflow is the dramatic reduction in volume (and thus mass) relative to the original solid wrench.
 
@@ -204,7 +204,7 @@ This illustrates the trade-off between structural efficiency (lower mass, materi
 
 ---
 
-## 🧪 Tools Used
+##  Tools Used
 
 - **ANSYS Workbench** — Structural FEA  
 - **MATLAB** — Hand-calculation script for beam and fracture mechanics  
@@ -214,7 +214,7 @@ This illustrates the trade-off between structural efficiency (lower mass, materi
 
 ---
 
-## 📁 Full Project Repository
+##  Full Project Repository
 
 The complete set of scripts, CAD models, FEA result exports, and generative design files is available in the GitHub repository:
 
