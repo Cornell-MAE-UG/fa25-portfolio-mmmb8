@@ -57,7 +57,7 @@ These predictions were then compared with a 3D ANSYS model under a 600 in·lbf t
 **Representative figures from the baseline analysis:**
 
 Baseline hand-calculation MATLAB output:  
-![Baseline Hand Calculations](/assets/images/image_045.png)
+![Baseline Hand Calculations](2{{ "/assets/images/image_045.png" | relative_url }})
 
 Baseline deflection from ANSYS: (/assets/images/image_046.png)
 
@@ -220,5 +220,8 @@ The complete set of scripts, CAD models, FEA result exports, and generative desi
 
 👉 **GitHub Repository:**  
 https://github.com/Cornell-MAE-UG/fa25-portfolio-mmmb8  
+
+[** Download Full PDF Version**]({{ "/assets/GD MAE 3270 Final Project (1).pdf" | relative_url }})
+
 
 
