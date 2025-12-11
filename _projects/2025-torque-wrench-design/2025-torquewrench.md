@@ -57,10 +57,11 @@ These predictions were then compared with a 3D ANSYS model under a 600 in·lbf t
 **Representative figures from the baseline analysis:**
 
 Baseline hand-calculation MATLAB output:  
-![Baseline Hand Calculations](/assets/images/image_045.png)
+![Baseline Hand Calculations]
+image: /assets/images/image_045.png
 
 Baseline deflection from ANSYS:  
-![Baseline Deflection](/assets/images/image_046.png)
+image: /assets/images/image_046.png
 
 Baseline strain at gauge location:  
 ![Baseline Strain at Gauge](/assets/images/image_047.png)
