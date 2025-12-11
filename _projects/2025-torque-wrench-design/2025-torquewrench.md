@@ -6,7 +6,7 @@ description: "A complete mechanical engineering workflow including analytical be
 featured: true
 ---
 
-# Instrumented Torque Wrench — FEA, Material Optimization, and Generative Design
+
 
 This project presents a full design workflow for a **600 in·lbf instrumented torque wrench**, beginning with classical hand calculations and progressing through ANSYS simulation, material selection, sensitivity analysis, and finally a Fusion 360 generative design study.  
 The work integrates principles of mechanics of materials, structural simulation, instrumentation engineering, and modern computational design.
