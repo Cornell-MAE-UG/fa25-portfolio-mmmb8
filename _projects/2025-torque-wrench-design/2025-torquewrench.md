@@ -56,22 +56,22 @@ These predictions were then compared with a 3D ANSYS model under a 600 in·lbf t
 **Representative figures from the baseline analysis:**
 
 Baseline hand-calculation MATLAB output:  
-![Baseline Hand Calculations](../assets/images/2025-torquewrench/image_045.png)
+![Baseline Hand Calculations](/assets/images/2025-torquewrench/image_045.png)
 
 Baseline deflection from ANSYS:  
-![Baseline Deflection](../assets/images/2025-torquewrench/image_046.png)
+![Baseline Deflection](/assets/images/2025-torquewrench/image_046.png)
 
 Baseline strain at gauge location:  
-![Baseline Strain at Gauge](../assets/images/2025-torquewrench/image_047.png)
+![Baseline Strain at Gauge](/assets/images/2025-torquewrench/image_047.png)
 
 Baseline maximum normal stress with clamp-induced concentration:  
-![Baseline Max Stress](../assets/images/2025-torquewrench/image_048.png)
+![Baseline Max Stress](/assets/images/2025-torquewrench/image_048.png)
 
 Deformed mesh visualization for beam-theory validity check:  
-![Baseline Deformed Mesh](../assets/images/2025-torquewrench/image_049.png)
+![Baseline Deformed Mesh](/assets/images/2025-torquewrench/image_049.png)
 
 Zoom on stress near the clamped drive region:  
-![Baseline Clamp Stress Zoom](../assets/images/2025-torquewrench/image_050.png)
+![Baseline Clamp Stress Zoom](/assets/images/2025-torquewrench/image_050.png)
 
 ---
 
