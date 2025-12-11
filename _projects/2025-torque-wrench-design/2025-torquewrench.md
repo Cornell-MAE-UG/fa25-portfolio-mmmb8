@@ -219,6 +219,6 @@ This illustrates the trade-off between structural efficiency (lower mass, materi
 The complete set of scripts, CAD models, FEA result exports, and generative design files is available in the GitHub repository:
 
 👉 **GitHub Repository:**  
-https://github.com/YOUR_USERNAME/instrumented-torque-wrench-design  
+https://github.com/Cornell-MAE-UG/fa25-portfolio-mmmb8  
 
 *(Replace with your actual repo link.)*
