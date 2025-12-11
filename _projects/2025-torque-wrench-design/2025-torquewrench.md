@@ -221,4 +221,4 @@ The complete set of scripts, CAD models, FEA result exports, and generative desi
 👉 **GitHub Repository:**  
 https://github.com/Cornell-MAE-UG/fa25-portfolio-mmmb8  
 
-*(Replace with your actual repo link.)*
+
