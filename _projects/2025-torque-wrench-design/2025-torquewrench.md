@@ -60,8 +60,7 @@ Baseline hand-calculation MATLAB output:
 ![Baseline Hand Calculations]
 image: /assets/images/image_045.png
 
-Baseline deflection from ANSYS:  
-image: /assets/images/image_046.png
+Baseline deflection from ANSYS: (image:/assets/images/image_046.png)
 
 Baseline strain at gauge location:  
 ![Baseline Strain at Gauge](/assets/images/image_047.png)
