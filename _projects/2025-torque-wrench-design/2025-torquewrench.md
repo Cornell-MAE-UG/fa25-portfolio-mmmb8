@@ -5,8 +5,8 @@ year: 2025
 description: "A complete mechanical engineering workflow including analytical beam-theory calculations, ANSYS FEA validation, material & geometry optimization, strain-gauge instrumentation, and Fusion 360 generative design exploration."
 image: /assets/images/image_018.png
 featured: true
----
 
+---
 
 
 This project presents a full design workflow for a **600 in·lbf instrumented torque wrench**, beginning with classical hand calculations and progressing through ANSYS simulation, material selection, sensitivity analysis, and finally a Fusion 360 generative design study.  
@@ -57,10 +57,9 @@ These predictions were then compared with a 3D ANSYS model under a 600 in·lbf t
 **Representative figures from the baseline analysis:**
 
 Baseline hand-calculation MATLAB output:  
-![Baseline Hand Calculations]
-image: /assets/images/image_045.png
+![Baseline Hand Calculations](/assets/images/image_045.png)
 
-Baseline deflection from ANSYS: (image:/assets/images/image_046.png)
+Baseline deflection from ANSYS: (/assets/images/image_046.png)
 
 Baseline strain at gauge location:  
 ![Baseline Strain at Gauge](/assets/images/image_047.png)
