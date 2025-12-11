@@ -3,6 +3,7 @@ layout: project
 title: "Instrumented Torque Wrench — FEA, Material Selection, and Generative Design"
 year: 2025
 description: "A complete mechanical engineering workflow including analytical beam-theory calculations, ANSYS FEA validation, material & geometry optimization, strain-gauge instrumentation, and Fusion 360 generative design exploration."
+image: /assets/images/image_018.png
 featured: true
 ---
 
