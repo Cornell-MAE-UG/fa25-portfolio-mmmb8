@@ -3,7 +3,7 @@ layout: project
 title: Engineering Ethics Class Overview
 description: Overview of my Engineering ethics class with key takeaways
 technologies: 
-image: /assets/images/function-graph.png
+image: /assets/images/ethics4300.png
 ---
 
 
