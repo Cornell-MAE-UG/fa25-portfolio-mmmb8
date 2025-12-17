@@ -3,7 +3,7 @@ layout: project
 title: Blade Design
 description: "Airfoil selection, CFD simulation, and wind-tunnel data acquisition for a torque-optimized small wind turbine operating under a Weibull wind environment."
 technologies: [MATLAB, ANSYS Fluent, Solidworks]
-image: /assets/images/function-graph.png
+image: /assets/images/blade1.png
 ---
 
 
