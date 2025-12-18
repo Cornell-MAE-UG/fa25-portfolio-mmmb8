@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Torque-Optimized Wind Turbine Blade — Low-Re Aerodynamics, CFD, and Testing"
+title: "Wind Turbine Blade Design"
 year: 2025
 description: "End-to-end design of a small-scale wind turbine blade optimized for torque at extremely low Reynolds numbers using blade element theory, ANSYS Fluent CFD, structural validation, and wind tunnel testing."
 featured: true
