@@ -32,7 +32,7 @@ The blade was designed for operation in the **Big Blue wind tunnel**, characteri
 
 A comparative evaluation of low-Re airfoils identified the **S1223 airfoil** as the optimal choice. Unlike conventional sections, the S1223 achieves **exceptionally high lift coefficients (CL ≈ 1.8–2.0)** in the relevant Reynolds range and exhibits **gentle stall behavior**, which is critical for stable torque production during startup and off-design operation.
 
-![Lift Coefficient Comparison](/assets/images/figure_1_lift_coefficient_vs_aoa.png)
+![Lift Coefficient Comparison](../assets/images/figure_1_lift_coefficient_vs_aoa.png)
 *Figure 1: Lift coefficient vs. angle of attack comparison at low Reynolds number.*
 
 ![Lift-to-Drag Comparison](/assets/images/figure_2_lift_to_drag_vs_aoa.png)
