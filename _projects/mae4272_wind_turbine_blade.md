@@ -32,13 +32,13 @@ The blade was designed for operation in the **Big Blue wind tunnel**, characteri
 
 A comparative evaluation of low-Re airfoils identified the **S1223 airfoil** as the optimal choice. Unlike conventional sections, the S1223 achieves **exceptionally high lift coefficients (CL ≈ 1.8–2.0)** in the relevant Reynolds range and exhibits **gentle stall behavior**, which is critical for stable torque production during startup and off-design operation.
 
-![Lift Coefficient Comparison](/assets/images/mae4272_blade/figure_1_lift_coefficient_vs_aoa.png)
+![Lift Coefficient Comparison](/assets/images/figure_1_lift_coefficient_vs_aoa.png)
 *Figure 1: Lift coefficient vs. angle of attack comparison at low Reynolds number.*
 
-![Lift-to-Drag Comparison](/assets/images/mae4272_blade/figure_2_lift_to_drag_vs_aoa.png)
+![Lift-to-Drag Comparison](/assets/images/figure_2_lift_to_drag_vs_aoa.png)
 *Figure 2: Lift-to-drag ratio comparison highlighting S1223 efficiency at low Re.*
 
-![CL/CD vs AOA](/assets/images/mae4272_blade/figure_3_cl_cd_vs_aoa.png)
+![CL/CD vs AOA](/assets/images/figure_3_cl_cd_vs_aoa.png)
 *Figure 3: Aerodynamic efficiency of S1223 across Reynolds numbers.*
 
 ---
@@ -59,10 +59,10 @@ This geometry prioritizes torque generation while maintaining structural robustn
 
 Structural safety was assessed using MATLAB-based bending moment calculations derived from distributed aerodynamic loads. Accura 25 SLA material properties were used to verify that stresses remained well below allowable limits.
 
-![Rotor Torque vs Wind Speed](/assets/images/mae4272_blade/figure_4_rotor_torque_vs_wind_speed.png)
+![Rotor Torque vs Wind Speed](/assets/images/figure_4_rotor_torque_vs_wind_speed.png)
 *Figure 4: Predicted rotor torque across wind speeds.*
 
-![Root Bending Moment](/assets/images/mae4272_blade/figure_5_root_bending_moment_vs_wind_speed.png)
+![Root Bending Moment](/assets/images/figure_5_root_bending_moment_vs_wind_speed.png)
 *Figure 5: Root bending moment and structural safety margin.*
 
 The predicted **failure wind speed of ~68 m/s** provides more than a **10× safety margin** over expected operating conditions.
@@ -73,7 +73,7 @@ The predicted **failure wind speed of ~68 m/s** provides more than a **10× safe
 
 The blade was modeled in **SolidWorks** using multiple airfoil cross-sections lofted along the span. Early CAD iterations revealed practical issues related to **trailing edge closure, STL integrity, and hub geometry**, which affected both printing and CFD usability.
 
-![Closed CAD Model](/assets/images/mae4272_blade/figure_8_closed_cad_model.png)
+![Closed CAD Model](/assets/images/figure_8_closed_cad_model.png)
 *Figure 8: Final closed CAD geometry used for CFD analysis.*
 
 These challenges required manual airfoil data cleanup and segmented lofting, introducing minor geometric discontinuities that were deemed negligible for aerodynamic analysis.
@@ -85,19 +85,19 @@ These challenges required manual airfoil data cleanup and segmented lofting, int
 ### Geometry and Domain
 The CFD model used a **120° periodic wedge domain** to reduce computational cost while capturing rotational flow physics.
 
-![Fluid Domain Geometry](/assets/images/mae4272_blade/figure_9_fluid_domain_geometry.png)
+![Fluid Domain Geometry](/assets/images/figure_9_fluid_domain_geometry.png)
 *Figure 9: CFD fluid domain.*
 
 ### Meshing
 A refined surface and polyhedral volume mesh balanced near-wall resolution with manageable runtime.
 
-![Surface Mesh](/assets/images/mae4272_blade/figure_10_fluid_domain_surface_mesh.png)
+![Surface Mesh](/assets/images/figure_10_fluid_domain_surface_mesh.png)
 *Figure 10: Fluid domain surface mesh.*
 
-![Blade Surface Mesh](/assets/images/mae4272_blade/figure_11_blade_surface_mesh.png)
+![Blade Surface Mesh](/assets/images/figure_11_blade_surface_mesh.png)
 *Figure 11: Blade surface mesh.*
 
-![Volume Mesh](/assets/images/mae4272_blade/figure_12_volume_mesh_cross_section.png)
+![Volume Mesh](/assets/images/figure_12_volume_mesh_cross_section.png)
 *Figure 12: Volume mesh cross-section.*
 
 ### Solver Setup
@@ -112,16 +112,16 @@ A refined surface and polyhedral volume mesh balanced near-wall resolution with 
 
 Pressure contours show the expected **high-pressure stagnation region** on the blade front and low-pressure suction region behind the blade, producing the torque-driving pressure differential.
 
-![Pressure Front](/assets/images/mae4272_blade/figure_13_pressure_contour_blade_front.png)
+![Pressure Front](/assets/images/figure_13_pressure_contour_blade_front.png)
 *Figure 13: Pressure contour on blade front.*
 
-![Pressure Back](/assets/images/mae4272_blade/figure_14_pressure_contour_blade_back.png)
+![Pressure Back](/assets/images/figure_14_pressure_contour_blade_back.png)
 *Figure 14: Pressure contour on blade back.*
 
-![Midspan Pressure](/assets/images/mae4272_blade/figure_15_pressure_contour_midspan.png)
+![Midspan Pressure](/assets/images/figure_15_pressure_contour_midspan.png)
 *Figure 15: Pressure contour through blade midspan.*
 
-![Torque Report](/assets/images/mae4272_blade/figure_16_torque_report.png)
+![Torque Report](/assets/images/figure_16_torque_report.png)
 *Figure 16: CFD torque report.*
 
 CFD predicted approximately **11 W total power**, significantly higher than measured values, highlighting limitations in turbulence modeling, mesh fidelity, and boundary condition assumptions at very low Reynolds numbers.
