@@ -5,7 +5,7 @@ description: "Airfoil selection, CFD simulation, and wind-tunnel data acquisitio
 technologies: [MATLAB, ANSYS Fluent, Solidworks]
 image: /assets/images/blade1.png
 ---
-[** Download Full PDF Version**]({{ "/assets/4272 Design Project Plan.pdf" | relative_url }})
+[** Download Full PDF Version with Images and Graphs**]({{ "/assets/4272 Design Project Plan.pdf" | relative_url }})
 
 # Small-Scale Wind Turbine Blade Design  
 ### Airfoil Development • ANSYS Fluent CFD • Experimental Wind-Tunnel Validation  
