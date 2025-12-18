@@ -1,101 +1,151 @@
 ---
 layout: project
-title: "Wind Turbine Blade Design — CFD, Testing, and Low-Re Aerodynamics"
+title: "Torque-Optimized Wind Turbine Blade — Low-Re Aerodynamics, CFD, and Testing"
 year: 2025
-description: "End-to-end blade design workflow including airfoil selection, CAD, ANSYS Fluent CFD, and wind-tunnel-informed validation for low Reynolds number operation."
+description: "End-to-end design of a small-scale wind turbine blade optimized for torque at extremely low Reynolds numbers using blade element theory, ANSYS Fluent CFD, structural validation, and wind tunnel testing."
 featured: true
 image: /assets/images/blade1.png
+---
+
+# Torque-Optimized Wind Turbine Blade  
+### Low-Re Aerodynamics, CFD, and Experimental Validation
+
+This project documents my work designing, analyzing, and testing a **small-scale wind turbine blade optimized for torque production** in an extremely low Reynolds number regime. The design emphasizes **startup torque, low-speed operation, and experimental feasibility**, rather than peak aerodynamic efficiency, reflecting real-world constraints encountered in small-scale energy systems.
+
+The workflow integrates **blade element momentum theory, CAD modeling, CFD simulation in ANSYS Fluent, structural safety analysis, and physical wind tunnel testing**, with iterative refinement driven by both modeling insight and experimental limitations.
 
 ---
 
-# Wind Turbine Blade Design — CFD, Testing, and Low-Re Aerodynamics
+## Design Context and Objectives
 
-This project documents my work designing and evaluating a **small-scale wind turbine blade** for low Reynolds number flow. The focus was on torque generation, manufacturability, and experimental feasibility, with a strong emphasis on **CFD-driven insight** rather than purely theoretical performance curves.
+The blade was designed for operation in the **Big Blue wind tunnel**, characterized by a Weibull wind distribution with a mean wind speed of approximately 4.6 m/s. Given a maximum chord of 2 inches and air kinematic viscosity of 1.5×10⁻⁵ m²/s, the blade operates in a **Reynolds number range of roughly 9,300–21,000**, where conventional NACA airfoils perform poorly due to laminar separation.
 
----
-
-## Project Objectives
-
-- Design a blade optimized for **low-Reynolds-number operation**
-- Generate measurable torque at low tip-speed ratios
-- Validate aerodynamic behavior using **ANSYS Fluent**
-- Integrate modeling decisions with experimental constraints
+**Primary objectives:**
+- Maximize **torque output** across the expected wind distribution  
+- Achieve reliable **startup and low-speed operation**  
+- Remain within **geometric, structural, and testing constraints**  
+- Validate aerodynamic behavior using **CFD and experiment**
 
 ---
 
-## Design Overview
+## Airfoil Selection and Aerodynamic Rationale
 
-First Deliverable
-Technical Objectives
-Our design objective is to generate the maximum torque output for a small-scale wind turbine operating under a Weibull wind-speed distribution (k = 5, c = 5 m/s). We are optimizing for torque and startup performance, rather than peak aerodynamic efficiency, because our low Reynolds number regime (Re ≈ 9×10³–2×10⁴) makes high-efficiency, high-λ operation impractical.
-Key technical constraints and design parameters include:
-Maximum blade radius: 6 inches (0.152 m)
-Attachment hub radius: 1 inch (0.0254 m)
-Fixed rotational speed: ≤ 2000 rpm
-Operational tip-speed ratio (λ): 3 (≈900 rpm chosen)
-Chord length: 2 in (0.0508 m) maximum
-Material: Accura 25 (SLA printed)
-Target Reynolds number: 9.3×10³ – 2.1×10⁴
-Operating wind range: 2.8 – 6.2 m/s (based on Weibull 5–95%)
+A comparative evaluation of low-Re airfoils identified the **S1223 airfoil** as the optimal choice. Unlike conventional sections, the S1223 achieves **exceptionally high lift coefficients (CL ≈ 1.8–2.0)** in the relevant Reynolds range and exhibits **gentle stall behavior**, which is critical for stable torque production during startup and off-design operation.
 
-These parameters directly influence our aerodynamic design choices, twist and pitch distributions, and material stress checks for manufacturability and testing in Big Blue.
-3. Team Roles & Timeline: 
-Initial Design Parameters (Sarah Grace)
-CAD (Marco)
-CFD (Josh)
-Data Analysis and Iterations (Matthew)
-Final Design Decision (All)
-Potential Roadblocks:
-Ensuring proper twist orientation and...
+![Lift Coefficient Comparison](/assets/images/mae4272_blade/figure_1_lift_coefficient_vs_aoa.png)
+*Figure 1: Lift coefficient vs. angle of attack comparison at low Reynolds number.*
+
+![Lift-to-Drag Comparison](/assets/images/mae4272_blade/figure_2_lift_to_drag_vs_aoa.png)
+*Figure 2: Lift-to-drag ratio comparison highlighting S1223 efficiency at low Re.*
+
+![CL/CD vs AOA](/assets/images/mae4272_blade/figure_3_cl_cd_vs_aoa.png)
+*Figure 3: Aerodynamic efficiency of S1223 across Reynolds numbers.*
 
 ---
 
-## CAD and Geometry
+## Blade Geometry and Torque Optimization
 
-The blade geometry was modeled parametrically to allow rapid iteration on chord, twist, and airfoil placement. This enabled downstream CFD meshing and ensured compatibility with wind tunnel mounting constraints.
+The blade was designed around a **low tip-speed ratio (λ = 3)** to intentionally rotate the lift vector toward the tangential direction, increasing torque at the expense of peak efficiency. Blade element momentum theory guided the geometry:
 
-![Blade CAD](/assets/images/mae4272_blade/blade_cad.png)
+- **Linear chord taper:** 2.0 in (root) → 0.4 in (tip)  
+- **Strong twist distribution:** ~60° at root → ~14° near tip  
+- **Target angle of attack:** ≈ 3° across the span  
+
+This geometry prioritizes torque generation while maintaining structural robustness and manufacturability.
+
+---
+
+## Structural Validation
+
+Structural safety was assessed using MATLAB-based bending moment calculations derived from distributed aerodynamic loads. Accura 25 SLA material properties were used to verify that stresses remained well below allowable limits.
+
+![Rotor Torque vs Wind Speed](/assets/images/mae4272_blade/figure_4_rotor_torque_vs_wind_speed.png)
+*Figure 4: Predicted rotor torque across wind speeds.*
+
+![Root Bending Moment](/assets/images/mae4272_blade/figure_5_root_bending_moment_vs_wind_speed.png)
+*Figure 5: Root bending moment and structural safety margin.*
+
+The predicted **failure wind speed of ~68 m/s** provides more than a **10× safety margin** over expected operating conditions.
+
+---
+
+## CAD Modeling and Manufacturing Challenges
+
+The blade was modeled in **SolidWorks** using multiple airfoil cross-sections lofted along the span. Early CAD iterations revealed practical issues related to **trailing edge closure, STL integrity, and hub geometry**, which affected both printing and CFD usability.
+
+![Closed CAD Model](/assets/images/mae4272_blade/figure_8_closed_cad_model.png)
+*Figure 8: Final closed CAD geometry used for CFD analysis.*
+
+These challenges required manual airfoil data cleanup and segmented lofting, introducing minor geometric discontinuities that were deemed negligible for aerodynamic analysis.
 
 ---
 
 ## CFD Methodology (ANSYS Fluent)
 
-### Domain and Mesh
+### Geometry and Domain
+The CFD model used a **120° periodic wedge domain** to reduce computational cost while capturing rotational flow physics.
 
-The fluid domain was constructed to match wind tunnel scale effects and to support rotational flow modeling. A refined surface and volume mesh was generated around the blade to capture pressure gradients accurately.
+![Fluid Domain Geometry](/assets/images/mae4272_blade/figure_9_fluid_domain_geometry.png)
+*Figure 9: CFD fluid domain.*
 
-![Fluid Domain](/assets/images/mae4272_blade/fluid_domain.png)
-![Volume Mesh](/assets/images/mae4272_blade/volume_mesh.png)
+### Meshing
+A refined surface and polyhedral volume mesh balanced near-wall resolution with manageable runtime.
 
-### Turbulence Model
+![Surface Mesh](/assets/images/mae4272_blade/figure_10_fluid_domain_surface_mesh.png)
+*Figure 10: Fluid domain surface mesh.*
 
-A **k–ω turbulence model** was selected for its reliability in near-wall resolution at low Reynolds numbers.
+![Blade Surface Mesh](/assets/images/mae4272_blade/figure_11_blade_surface_mesh.png)
+*Figure 11: Blade surface mesh.*
+
+![Volume Mesh](/assets/images/mae4272_blade/figure_12_volume_mesh_cross_section.png)
+*Figure 12: Volume mesh cross-section.*
+
+### Solver Setup
+- **Turbulence model:** k–ω  
+- **Air density:** 1.2 kg/m³  
+- **Inlet velocity:** 6 m/s  
+- **Iterations:** 1500  
 
 ---
 
-## Results and Post-Processing
+## CFD Results and Post-Processing
 
-Pressure contours confirmed expected stagnation regions and pressure differentials across the blade surfaces, directly contributing to torque generation.
+Pressure contours show the expected **high-pressure stagnation region** on the blade front and low-pressure suction region behind the blade, producing the torque-driving pressure differential.
 
-![Pressure Contours](/assets/images/mae4272_blade/pressure_contours.png)
-![Torque Report](/assets/images/mae4272_blade/torque_report.png)
+![Pressure Front](/assets/images/mae4272_blade/figure_13_pressure_contour_blade_front.png)
+*Figure 13: Pressure contour on blade front.*
+
+![Pressure Back](/assets/images/mae4272_blade/figure_14_pressure_contour_blade_back.png)
+*Figure 14: Pressure contour on blade back.*
+
+![Midspan Pressure](/assets/images/mae4272_blade/figure_15_pressure_contour_midspan.png)
+*Figure 15: Pressure contour through blade midspan.*
+
+![Torque Report](/assets/images/mae4272_blade/figure_16_torque_report.png)
+*Figure 16: CFD torque report.*
+
+CFD predicted approximately **11 W total power**, significantly higher than measured values, highlighting limitations in turbulence modeling, mesh fidelity, and boundary condition assumptions at very low Reynolds numbers.
 
 ---
 
-## Experimental Context
+## Experimental Testing and Reflection
 
-Although the project emphasized CFD, design choices were guided by experimental feasibility. Blade geometry, hub interface, and expected loading were all constrained by wind tunnel testing requirements.
+Wind tunnel testing confirmed **strong startup behavior and robust torque generation**, but revealed that peak power consistently occurred near **1300 rpm**, rather than the designed 900 rpm. Testing was limited by **magnetic brake capacity and maximum wind speed**, preventing full characterization of the blade’s performance envelope.
+
+Despite data collection challenges, the blade **outperformed initial expectations**, suggesting untapped aerodynamic potential beyond the test constraints.
 
 ---
 
 ## Key Takeaways
 
-- Low-Re airfoil selection is critical for meaningful torque output
-- CFD is most valuable when tightly coupled to physical constraints
-- Design success was measured by **robust behavior**, not peak efficiency
+- Low-Re airfoil selection is critical for meaningful torque output  
+- Low tip-speed ratio operation can outperform expectations when torque-limited  
+- CFD is most valuable when paired with experimental reality  
+- Manufacturing and CAD fidelity strongly influence downstream analysis  
 
 ---
 
 ## Conclusion
 
-This project strengthened my ability to connect **aerodynamic theory, CFD simulation, and experimental design** into a single workflow. More importantly, it reinforced my interest in live data collection, validation-driven modeling, and designing components that perform reliably under real constraints.
+This project demonstrates a complete **aerodynamic design workflow** under real constraints, integrating theory, CFD, structures, and testing. It strengthened my interest in **validation-driven modeling, low-Re aerodynamics, and experimental feedback loops**, and highlighted how design intent must continuously adapt to physical and operational limits.
+
